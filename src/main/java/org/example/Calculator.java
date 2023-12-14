@@ -60,7 +60,6 @@ public class Calculator {
                 log.info("Прошла операция деления: " + num1 + " / " + num2 + " = " + (result = num1 / num2));
                 break;
             default:
-                System.out.println("Попробуйте ещё раз");
                 System.out.println("Операция некорретна. Попробуйте сначала!");
                 break;
         }
