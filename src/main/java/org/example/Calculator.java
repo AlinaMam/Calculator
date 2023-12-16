@@ -44,24 +44,40 @@ public class Calculator {
         double result = 0.0;
         switch (line) {
             case "+":
-                System.out.println(num1 + " + " + num2 + " = " + (result = num1 + num2));
-                log.info("Прошла операция сложения: " + num1 + " + " + num2 + " = " + (result = num1 + num2));
+                System.out.println(num1 + " + " + num2 + " = " + (result = sum(num1, num2)));
+                log.info("Прошла операция сложения: " + num1 + " + " + num2 + " = " + (result = sum(num1, num2)));
                 break;
             case "-":
-                System.out.println(num1 + " - " + num2 + " = " + (result = num1 - num2));
-                log.info("Прошла операция вычитания: " + num1 + " - " + num2 + " = " + (result = num1 - num2));
+                System.out.println(num1 + " - " + num2 + " = " + (result = sub(num1, num2)));
+                log.info("Прошла операция вычитания: " + num1 + " - " + num2 + " = " + (result = sub(num1, num2)));
                 break;
             case "*":
-                System.out.println(num1 + " * " + num2 + " = " + (result = num1 * num2));
-                log.info("Прошла операция умножения: " + num1 + " * " + num2 + " = " + (result = num1 * num2));
+                System.out.println(num1 + " * " + num2 + " = " + (result = mul(num1, num2)));
+                log.info("Прошла операция умножения: " + num1 + " * " + num2 + " = " + (result = mul(num1, num2)));
                 break;
             case "/":
-                System.out.println(num1 + " / " + num2 + " = " + (result = num1 / num2));
-                log.info("Прошла операция деления: " + num1 + " / " + num2 + " = " + (result = num1 / num2));
+                System.out.println(num1 + " / " + num2 + " = " + (result = div(num1, num2)));
+                log.info("Прошла операция деления: " + num1 + " / " + num2 + " = " + (result = div(num1, num2)));
                 break;
             default:
                 System.out.println("Операция некорретна. Попробуйте сначала!");
                 break;
         }
+    }
+
+    public static int sum(int num1, int num2) {
+        return (num1 + num2);
+    }
+
+    public static int sub(int num1, int num2) {
+        return (num1 - num2);
+    }
+
+    public static int mul(int num1, int num2) {
+        return (num1 * num2);
+    }
+
+    public static int div(int num1, int num2) {
+        return (num1 / num2);
     }
 }
